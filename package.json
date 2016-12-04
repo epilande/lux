@@ -1,10 +1,11 @@
 {
-  "name": "lux",
+  "name": "Lux",
   "version": "0.0.1",
   "description": "Adaptive brightness based on screen contents",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "NODE_ENV=production electron-packager . --platform=darwin --arch=all --prune --out release --overwrite --icon ./app.icns"
   },
   "author": "Emmanuel Pilande",
   "engine-strict": true,
@@ -14,8 +15,10 @@
   },
   "dependencies": {
     "electron": "^1.4.10",
-    "electron-packager": "^8.3.0",
     "fix-path": "^2.1.0",
     "screen-brightness": "^0.0.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.3.0",
   }
 }
