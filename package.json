@@ -16,6 +16,7 @@
     "npm": ">= 3.x"
   },
   "dependencies": {
+    "brightness": "^3.0.0",
     "electron": "^1.4.10",
     "fix-path": "^2.1.0",
     "screen-brightness": "^0.0.1"
