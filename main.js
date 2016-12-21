@@ -1,6 +1,8 @@
 const { app, Menu, Tray } = require('electron');
+const lux = require('./lux');
 
 let tray = null;
+let luxInterval;
 
 app.on('ready', () => {
   app.dock.hide();
@@ -17,6 +19,8 @@ app.on('ready', () => {
       click: menuItem => {
         menuItem.visible = false;
         contextMenu.items[2].visible = true;
+        lux.setCurrentBrightness();
+        luxInterval = setInterval(lux.normalizeBrightness, 500);
       },
     },
     {
@@ -25,6 +29,7 @@ app.on('ready', () => {
       click: menuItem => {
         menuItem.visible = false;
         contextMenu.items[1].visible = true;
+        clearInterval(luxInterval);
       },
     },
     {
