@@ -2,6 +2,9 @@ const screenBrightness = require('screen-brightness');
 const brightness = require('brightness');
 
 let brightnessLevel;
+// TODO: Allow this to be configurable
+const min = 0.3;
+const max = 1;
 
 const setCurrentBrightness = () => {
   brightness.get()
@@ -9,9 +12,6 @@ const setCurrentBrightness = () => {
       brightnessLevel = level + (screenBrightness() / 255);
     });
 }
-
-const min = 0.3;
-const max = 0.8;
 
 const normalizeBrightness = () => {
   const averageBrightness = screenBrightness() / 255;
@@ -24,9 +24,7 @@ const normalizeBrightness = () => {
   brightness.set(diff);
 }
 
-setCurrentBrightness();
-setInterval(normalizeBrightness, 500);
-
 module.exports = {
+  setCurrentBrightness,
   normalizeBrightness,
 };
