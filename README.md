@@ -1,8 +1,10 @@
 <h1 align="center">Lux</h1>
 
 <p align="center">
-  Adaptive brightness based on screen contents<br>
-  <i>Lux was inspired by <a href="https://github.com/anishathalye/lumen">Lumen</a></i><br>
+  <strong>Adaptive brightness based on screen contents.</strong></br>
+  Made with love & <a href="http://electron.atom.io/">Electron</a>.</br></br>
+  <a href="https://github.com/epilande/lux/releases/latest"><img height="200px" src="lux.png"/></a></br></br>
+  <em>Lux was inspired by <a href="https://github.com/anishathalye/lumen">Lumen</a>.</em></br>
 </p>
 
 
@@ -11,16 +13,42 @@
 
 
 ## Usage
-This is mainly useful at night, when you're switching between light & dark
-themes. Less squinting.
+Do you work late at night with the lights off? Do you squint every time you
+switch between apps with light & dark themes?
+
+**Lux** fixes this problem by automatically adjusting your screen brightness.
+Color samples are taken from your screen & based on that, Lux will automagically
+lighten/darken your screen brightness.
 
 ### Important
-Disable "**Automatically adjust brightness**" in `System Preferences` ->
+While Lux is running you're not able to change your brightness level, simply
+turn off Lux to get back full control.
+
+Make sure "**Automatically adjust brightness**" is disabled, you can find it in `System Preferences` ->
 `Displays`.
 
 
 ## Dev
-If you receive robotjs error, run:
+Install dependencies.
+
+```
+$ npm install
+```
+
+Launch dev environment.
+
+```
+$ npm run start
+```
+
+Package app.
+
+```
+$ npm run build
+```
+
+If you receive this [`Error: Module version mismatch`](https://github.com/octalmage/robotjs/issues/244), run the following
+command:
 
 ```
 $ npm run rebuild
