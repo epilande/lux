@@ -9,6 +9,8 @@
 
 
 ## Install
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/epilande/lux.svg)](https://greenkeeper.io/)
 [**Download the latest version**](https://github.com/epilande/lux/releases/latest), unzip, and move `Lux.app` into your Applications folder.
 
 
